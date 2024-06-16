@@ -1,3 +1,4 @@
+// VC, который содержит себе информацию о пользователи
 import UIKit
 
 final class DescriptionViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -14,22 +15,14 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
     private var agePicker = UIPickerView()
     private var genderPicker = UIPickerView()
     
+    // MARK: - Private properties
     private var ageData = Array(1...100)
     private var gendersData = ["Мужчина", "Женщина"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Настройка agePicker
-        agePicker.delegate = self
-        agePicker.dataSource = self
-        ageTextField.inputView = agePicker
+        setupForPicker()
         
-        // Настройка genderPicker
-        genderPicker.delegate = self
-        genderPicker.dataSource = self
-        genderTextField.inputView = genderPicker
-        
-        // Настройка datePicker
         createDatePicker()
         
         createToolbar()
@@ -39,14 +32,25 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
         
     }
     
-    func createDatePicker() {
+    // MARK: - Private Methods
+    private func setupForPicker() {
+        agePicker.delegate = self
+        agePicker.dataSource = self
+        ageTextField.inputView = agePicker
+        
+        genderPicker.delegate = self
+        genderPicker.dataSource = self
+        genderTextField.inputView = genderPicker
+    }
+    
+    private func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolBarForDatePicker()
     }
     
-    func createToolBarForDatePicker() -> UIToolbar {
+    private func createToolBarForDatePicker() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
@@ -55,7 +59,7 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
         return toolbar
     }
     
-    @objc func donePressed() {
+    @objc private func donePressed() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -97,6 +101,7 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
         view.endEditing(true)
     }
     
+    // MARK: - Private Methods
     private func createToolbar() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -105,7 +110,6 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
         toolbar.setItems([flexibleSpace, doneButton], animated: true)
         ageTextField.inputAccessoryView = toolbar
         genderTextField.inputAccessoryView = toolbar
-        //        dateTextField.inputAccessoryView = toolbar
     }
     
     @objc func dismissKeyboard() {
@@ -114,7 +118,6 @@ final class DescriptionViewController: UIViewController, UITextFieldDelegate, UI
     
     
     // MARK: - IBAction
-    
     @IBAction private func instagramAction(_ sender: UITextField) {
         let alertController = UIAlertController(title: "Введите Instagram", message: "", preferredStyle: .alert)
         alertController.addTextField { textField in

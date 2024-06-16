@@ -11,7 +11,7 @@
 		BBBDC88D2C18676900D30FB5 /* BirthdayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDC88C2C18676900D30FB5 /* BirthdayListViewController.swift */; };
 		BBF27A462C17A3C100069BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF27A452C17A3C100069BCC /* AppDelegate.swift */; };
 		BBF27A482C17A3C100069BCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF27A472C17A3C100069BCC /* SceneDelegate.swift */; };
-		BBF27A4A2C17A3C100069BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF27A492C17A3C100069BCC /* ViewController.swift */; };
+		BBF27A4A2C17A3C100069BCC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF27A492C17A3C100069BCC /* RegistrationViewController.swift */; };
 		BBF27A4D2C17A3C100069BCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BBF27A4C2C17A3C100069BCC /* Base */; };
 		BBF27A4F2C17A3C400069BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF27A4E2C17A3C400069BCC /* Assets.xcassets */; };
 		BBF27A522C17A3C400069BCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BBF27A512C17A3C400069BCC /* Base */; };
@@ -23,7 +23,7 @@
 		BBF27A422C17A3C100069BCC /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF27A452C17A3C100069BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF27A472C17A3C100069BCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBF27A492C17A3C100069BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBF27A492C17A3C100069BCC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		BBF27A4C2C17A3C100069BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBF27A4E2C17A3C400069BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBF27A512C17A3C400069BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		BB9FF1A72C1A4D7700F35CD1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BBF27A492C17A3C100069BCC /* ViewController.swift */,
+				BBF27A492C17A3C100069BCC /* RegistrationViewController.swift */,
 				BBBDC88C2C18676900D30FB5 /* BirthdayListViewController.swift */,
 				BB01AD372C1CD81E00D3FC81 /* DescriptionViewController.swift */,
 			);
@@ -176,7 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF27A4A2C17A3C100069BCC /* ViewController.swift in Sources */,
+				BBF27A4A2C17A3C100069BCC /* RegistrationViewController.swift in Sources */,
 				BBF27A462C17A3C100069BCC /* AppDelegate.swift in Sources */,
 				BBBDC88D2C18676900D30FB5 /* BirthdayListViewController.swift in Sources */,
 				BB01AD382C1CD81E00D3FC81 /* DescriptionViewController.swift in Sources */,

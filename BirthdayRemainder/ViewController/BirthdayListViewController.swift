@@ -1,15 +1,18 @@
+// VC, в котором содержится описание о пользователе
 import UIKit
 
+protocol BirthdayListDelegate {
+    func update(name: String, date: String, age: String)
+}
+
 final class BirthdayListViewController: UIViewController {
-    protocol BirthdayListDelegate {
-        func update(name: String, date: String, age: String)
-    }
     
     // MARK: - IBOutlet
-    @IBOutlet weak var nameLabek: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet private weak var nameLabek: UILabel!
+    @IBOutlet private weak var ageLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
     
+    // MARK: - Visual Components
     var photoValue: UIImage?
     
     override func viewDidLoad() {
@@ -21,6 +24,7 @@ final class BirthdayListViewController: UIViewController {
         destination.delegate = self
     }
     
+    // MARK: - Methods
     func update(name: String, date: String, age: String) {
         nameLabek.text = name.capitalized
         ageLabel.text = age + " лет"
